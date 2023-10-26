@@ -12,7 +12,6 @@ public class IdentifyLoginElements extends BaseTest {
 
     @Test
     public void loginElement(){
-        //<em>Discover</em>
 
         WebElement loginPopup = driver.findElement(By.linkText("Login"));
         assertEquals(loginPopup.isDisplayed(), true);
