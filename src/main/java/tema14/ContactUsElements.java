@@ -6,6 +6,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import utils.BaseTest;
 
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 public class ContactUsElements extends BaseTest {
@@ -40,7 +41,7 @@ public class ContactUsElements extends BaseTest {
         //System.out.println(responseMessage.isDisplayed());
 
         //System.out.println("textul" + responseMessage.getText());
-        assertTrue(responseMessage.getText().equals("Thank you for your message. It has been sent."));
-
+        //assertTrue(responseMessage.getText().equals("Thank you for your message. It has been sent."));
+        assertEquals(responseMessage.getText(), "Thank you for your message. It has been sent.");
     }
 }
