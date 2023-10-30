@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import utils.BaseTest;
 
-import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.*;
 
 public class IdentifyLoginElements extends BaseTest {
 
@@ -18,12 +18,12 @@ public class IdentifyLoginElements extends BaseTest {
 
         WebElement loginField = driver.findElement(By.className("login_field"));
         WebElement passwordField = driver.findElement(By.className("password_field"));
-        assertEquals(loginField.isDisplayed(), false);
-        assertEquals(passwordField.isDisplayed(), false);
+        assertFalse(loginField.isDisplayed());
+        assertFalse(passwordField.isDisplayed());
 
         loginPopup.click();
-        assertEquals(loginField.isDisplayed(), true);
-        assertEquals(passwordField.isDisplayed(), true);
+        assertTrue(loginField.isDisplayed());
+        assertTrue(passwordField.isDisplayed());
 
     }
 }
