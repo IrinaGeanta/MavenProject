@@ -40,6 +40,6 @@ public class SingleAuthorPage extends BaseTest {
         waitBiography.until(ExpectedConditions.visibilityOf(cookbooksPercentage));
 
         assertEquals(cookbooksPercentage.getText(), "82%");
-        
+
     }
 }
